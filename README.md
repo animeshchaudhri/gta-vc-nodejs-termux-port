@@ -19,7 +19,8 @@ Install and run:
 
 ```bash
 # clone the repo (if you haven't already)
-git clone https://github.com/your/repo.git
+git clone https://github.com/animeshchaudhri/gta-vc-nodejs-termux-port
+
 cd gta-vc-nodejs-termux-port
 
 # install dependencies (if package.json lists any)
