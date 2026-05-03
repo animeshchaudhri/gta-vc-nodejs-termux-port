@@ -3,7 +3,7 @@ gta-vc-nodejs-termux-port
 
 Port made by the DOS.Zone team: https://dos.zone/reVCDOS
 
-Official implementation: GitHub
+Official implementation: GitHub https://github.com/Carter54git/revcdos
 
 I ported this to Node.js and it works on Termux as well.
 
@@ -26,12 +26,12 @@ cd gta-vc-nodejs-termux-port
 npm install
 
 # start the packed build
-npm run start:packed
+npm start -- --packed revcdos.bin
 
-# then open http://localhost:8080 (or the port your server prints)
+# then open http://localhost:8000 (or the port your server prints)
 ```
 
-If you want to run a local archive instead, use `npm start -- --packed revcdos.bin`.
+If you want to get bin use this url `https://filebin.net/iuvsynyiwulyf7ov/revcdos.bin`.
 
 Termux (Android) Notes
 ----------------------
@@ -42,20 +42,16 @@ Termux provides a working Node.js package and can run simple Node servers. Typic
 pkg update && pkg upgrade
 pkg install git nodejs
 git clone https://github.com/your/repo.git
-cd reVCDOS-main
+cd gta-vc-nodejs-termux-port
 npm install
-node server.js
+npm start -- --packed revcdos.bin
 ```
 
-Important Termux tips:
-- Use `node server.js` and ensure the server listens on `0.0.0.0` (not only `127.0.0.1`) if you want other devices on the local network to reach it.
-- If ports below 1024 are used, Termux will require root privileges; prefer higher ports like `8080` or `3000`.
-- Some native modules (those requiring native compilation) can be problematic on Termux; this repo appears to be a pure JS/static server so it should be fine.
-
+.
 Testing on Termux
 -----------------
 
-1. Start the server on Termux with `node server.js`.
+1. Start the server on Termux with `npm start -- --packed revcdos.bin`.
 2. In a browser on the same Wi‑Fi network, visit `http://<termux-device-ip>:<port>`.
 3. To find the Termux device IP, run `ip addr show` or `ifconfig` in Termux.
 
