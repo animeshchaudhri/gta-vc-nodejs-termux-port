@@ -1,0 +1,14 @@
+{
+  "name": "gta-vc-nodejs-termux-port",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Node.js Termux port for the GTA Vice City packed game build",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "start:packed": "node server.js --packed https://filebin.net/iuvsynyiwulyf7ov/revcdos.bin"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
